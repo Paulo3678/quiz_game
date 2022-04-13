@@ -1,0 +1,35 @@
+.card-quiz {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 600px;
+}
+
+.card-quiz div.area-imagem-quiz>img {
+    width: 100%;
+}
+
+.card-quiz div.pergunta {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-quiz div.alternativas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.card-quiz div.alternativas .form-check {
+    width: 40%;
+    text-align: left;
+}
+
+#linha-tempo {
+    width: 100%;
+    position: relative;
+    height: 5px;
+    background-color: red;
+    transition: all .5s;
+}

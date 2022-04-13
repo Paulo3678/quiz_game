@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>FIM DE JOGO</h2>
+    <h3>VOCÊ MARCOU <span id="pontuacao"></span> PONTOS</h3>
+    <ul id="gabarito-list">
+        <li><strong>Gabarito</strong></li>
+    </ul>
+    <script>
+        const pontos = window.localStorage.getItem('pontuacao');
+        const gabarito = (window.localStorage.getItem('gabarito')).split(",");
+
+        gabarito.forEach(resposta => {
+            const ul = document.querySelector("#gabarito-list");
+            const li = document.createElement("li");
+            li.innerHTML = resposta;
+            ul.appendChild(li);
+
+        });
+
+        document.querySelector("#pontuacao").innerHTML = pontos;
+
+    </script>
+</body>
+
+</html>
